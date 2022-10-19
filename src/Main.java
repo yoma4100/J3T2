@@ -1,8 +1,13 @@
 public class Main {
     public static void main(String[] args) {
         int accountAmount = 100;
-        int payAmount = 1100;
+        int payAmount = -1100;
         int bonusAmount = payAmount / 100;
+
+        if (bonusAmount <= 0) {
+            bonusAmount = 0;
+        }
+
         int finalAccountAmount = accountAmount + payAmount + bonusAmount;
 
         System.out.println("Начислено бонусов: "+bonusAmount);
